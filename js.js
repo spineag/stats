@@ -59,8 +59,8 @@ function getCO2$(){
       );
        
       function f22(res){
-        console.log('f22:');
-        console.log(res);
+        $('#co2-1').text(res.data.carbonIntensity);
+        $('#co2-2').text(res.data.fossilFuelPercentage);
       };
 }
 
