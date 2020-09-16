@@ -1,5 +1,6 @@
 function getStats(){
     let  f1=function(res){
+        console.log('f1:');
         console.log(res);
     };
 
@@ -16,6 +17,7 @@ function getStats(){
 
 function getCO2(){
     let  f2=function(res){
+        console.log('f2:');
         console.log(res);
     };
 
@@ -39,6 +41,7 @@ function getStats$(){
       );
        
       function f11(res){
+        console.log('f11:');
         console.log(res);
       };
 }
@@ -49,6 +52,7 @@ function getCO2$(){
       );
        
       function f22(res){
+        console.log('f22:');
         console.log(res);
       };
 }
