@@ -26,5 +26,36 @@ function getCO2(){
     xhr.send();
 }
 
-getCO2();
-getStats();
+
+
+function getStats$(){
+    $.post(
+        "https://ua.energy/wp-admin/admin-ajax.php",
+        {
+            action: 'get_data_oes',
+            report_date: '15.09.2020',
+            type: 'day'
+        }, f11
+      );
+       
+      function f11(res){
+        console.log(res);
+      };
+}
+function getCO2$(){
+    $.get(
+        "https://api.co2signal.com/v1/latest",
+        {
+            countryCode: 'UA',
+            auth-token: 'fff2780a31b744e6'
+        }, f22
+      );
+       
+      function f22(res){
+        console.log(res);
+      };
+}
+
+
+getCO2$();
+getStats$();
