@@ -61,9 +61,25 @@ function getCO2$(){
       function f22(res){
         $('#co2-1').text(res.data.carbonIntensity);
         $('#co2-2').text(res.data.fossilFuelPercentage);
+        $('#co2-3').text(res.units.carbonIntensity);
       };
+}
+function getStatsPY(){
+    $.ajax({
+        url: "https://raw.githubusercontent.com/spineag/stats/master/UA.py",
+        headers: { 'Content-Type': 'application/json' },
+        type: 'POST',
+        success: function(res){
+            console.log('getStatsPY:');
+            console.log(res);
+        },
+        error: function(er){
+            console.log('error -getStatsPY:');
+            console.log(er);
+        }
+    });
 }
 
 
 getCO2$();
-getStats$();
+getStatsPY();
