@@ -31,19 +31,26 @@ function getCO2(){
 
 
 function getStats$(){
-    $.post(
-        "https://ua.energy/wp-admin/admin-ajax.php",
-        {
+    $.ajax({
+        url:"https://ua.energy/wp-admin/admin-ajax.php",
+        headers: { 'Content-Type': 'application/json' },
+        type: 'POST',
+        data:{
             action: 'get_data_oes',
             report_date: '15.09.2020',
             type: 'day'
-        }, f11
-      );
+        }, 
+        success: f11,
+        error: function(er){
+            console.log('error -11:');
+            console.log(er);
+        }
+    });
        
-      function f11(res){
-        console.log('f11:');
-        console.log(res);
-      };
+    function f11(res){
+    console.log('f11:');
+    console.log(res);
+    };
 }
 function getCO2$(){
     $.get(
