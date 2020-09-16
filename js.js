@@ -44,11 +44,8 @@ function getStats$(){
 }
 function getCO2$(){
     $.get(
-        "https://api.co2signal.com/v1/latest",
-        {
-            countryCode: 'UA',
-            auth-token: 'fff2780a31b744e6'
-        }, f22
+        "https://api.co2signal.com/v1/latest?countryCode=UA&auth-token=fff2780a31b744e6",
+        { }, f22
       );
        
       function f22(res){
