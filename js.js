@@ -59,6 +59,7 @@ function getCO2$(){
       );
        
       function f22(res){
+          console.log(res);
         $('#co2-1').text(res.data.carbonIntensity);
         $('#co2-2').text(res.data.fossilFuelPercentage);
         $('#co2-3').text(res.units.carbonIntensity);
