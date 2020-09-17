@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stats-test</title>
+    <script type="text/javascript"  src="https://d3js.org/d3.v6.min.js"></script> <!-- https://d3js.org/d3.v6.js -->
+    <style>
+        .square {
+            height: 20px;
+            width: 20px;
+            background-color: #555;
+            /* display: inline-block; */
+        }
+        .aes {background-color: #2A5784}
+        .tec {background-color: #7AAAD0}
+        .vde {background-color: #E1575A}
+        .tes {background-color: #FFC686}
+        .gesgaes {background-color: #7C4D79}
+        #colors { display: inline-block; margin: 10px; }
+        #colors div {margin: 10px;}
+        #colors span {
+            white-space: nowrap ;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <span style="margin:50px; font-weight:600; font-size:24px">15.09.2020</span>
+    <div id="stats" style="width:700px;height:400px"></div>
+    <div id='colors'>
+        <div class='aes square'><span>АЕС</span></div>
+        <div class='tec square'><span>ТЕЦ</span></div>
+        <div class='vde square'><span>ВДЕ</span></div>
+        <div class='tes square'><span>ТЕС ГК</span></div>
+        <div class='gesgaes square'><span>ГЕС та ГАЕС</span></div>
+    </div>
+
+    <script type="text/javascript"  src='js2.js'></script>
+</body>
+</html>
